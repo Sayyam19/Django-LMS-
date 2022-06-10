@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<style media="screen">
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+.jumbotron{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.jumbotron h1{
+  text-align: center;
+}
+
+
+</style>
+  </head>
+  <body>
+    {% include "library/navbaradmin.html" %}
+  
+   
+    <div class="jumbotron" >
+      <br>
+      <br>
+      <br>
+      <br>
+    <h1 class="display-4">Hello {{user.first_name}} !</h1>
+    <p class="lead" align="center">As you are Admin, you can Add,View,Update and Delete books in library.
+      <br><br><br><br>
+      <b align="center">Option Available For You</b>
+    </p>
+      <br>
+    <div class="options" style="text-align:center">
+      <!--<a href="addbook" class="btn btn-primary btn-lg active" style="border-radius: 0%;" role="button" aria-pressed="true">Add Book To Library</a><br><br>-->
+      <a href="addbook"><button type="button" class="btn btn-primary" style="padding:10px">Add Book To Library</button></a>
+      <br><br>
+      <a href="viewbook"><button type="button" class="btn btn-primary" style="padding:10px">View/Update/Delete Available Book</button></a>
+      <!--<a href="viewbook" class="btn btn-primary btn-lg active" style="border-radius: 0%;" role="button" aria-pressed="true">View/Update/Delete Available Book</a><br><br>-->
+    </div>
+    </div>
+    {% include "library/footer.html" %}
+  </body>
+</html>
